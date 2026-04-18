@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>استدامة المبادرة</title>
+
+  <style>
+
+    :root{
+
+      --primary:#123b6d;
+
+      --secondary:#1d5ea8;
+
+      --gold:#c89b3c;
+
+      --bg:#f4f7fb;
+
+      --card:#ffffff;
+
+      --text:#1f2937;
+
+      --muted:#6b7280;
+
+      --border:#dbe3ef;
+
+      --shadow:0 14px 36px rgba(18,59,109,.12);
+
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+
+      margin:0;
+
+      font-family:Tahoma,Arial,sans-serif;
+
+      background:linear-gradient(180deg,#edf3fb,#f8fbff);
+
+      color:var(--text);
+
+    }
+
+    .wrap{
+
+      width:min(1400px,95%);
+
+      margin:24px auto 40px;
+
+    }
+
+    .hero{
+
+      background:linear-gradient(135deg,var(--primary),var(--secondary));
+
+      color:#fff;
+
+      padding:28px 24px;
+
+      border-radius:24px;
+
+      text-align:center;
+
+      box-shadow:var(--shadow);
+
+      margin-bottom:24px;
+
+    }
+
+    .hero h1{
+
+      margin:0 0 8px;
+
+      font-size:38px;
+
+    }
+
+    .hero p{
+
+      margin:0;
+
+      color:#e8efff;
+
+      line-height:1.8;
+
+    }
+
+    .mindmap{
+
+      position:relative;
+
+      min-height:900px;
+
+      background:#fff;
+
+      border:1px solid var(--border);
+
+      border-radius:28px;
+
+      box-shadow:var(--shadow);
+
+      overflow:hidden;
+
+    }
+
+    .center{
+
+      position:absolute;
+
+      top:50%;
+
+      left:50%;
+
+      transform:translate(-50%,-50%);
+
+      width:280px;
+
+      min-height:150px;
+
+      background:linear-gradient(135deg,#fff7e8,#ffffff);
+
+      border:2px solid rgba(200,155,60,.35);
+
+      border-radius:24px;
+
+      display:flex;
+
+      align-items:center;
+
+      justify-content:center;
+
+      text-align:center;
+
+      padding:20px;
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:var(--primary);
+
+      box-shadow:var(--shadow);
+
+      z-index:3;
+
+    }
+
+    .node{
+
+      position:absolute;
+
+      width:260px;
+
+      background:var(--card);
+
+      border:1px solid var(--border);
+
+      border-radius:20px;
+
+      padding:16px;
+
+      box-shadow:var(--shadow);
+
+      z-index:2;
+
+    }
+
+    .node h3{
+
+      margin:0 0 8px;
+
+      font-size:20px;
+
+      color:var(--primary);
+
+    }
+
+    .node p{
+
+      margin:0;
+
+      color:var(--muted);
+
+      line-height:1.8;
+
+      font-size:14px;
+
+    }
+
+    .line{
+
+      position:absolute;
+
+      background:linear-gradient(135deg,var(--gold),var(--secondary));
+
+      height:4px;
+
+      border-radius:999px;
+
+      z-index:1;
+
+      opacity:.7;
+
+      transform-origin:right center;
+
+    }
+
+    .n1{top:70px; right:80px;}
+
+    .n2{top:280px; right:40px;}
+
+    .n3{top:520px; right:90px;}
+
+    .n4{bottom:70px; right:250px;}
+
+    .n5{top:70px; left:80px;}
+
+    .n6{top:280px; left:40px;}
+
+    .n7{top:520px; left:90px;}
+
+    .n8{bottom:70px; left:250px;}
+
+    .l1{top:210px; right:320px; width:250px; transform:rotate(22deg);}
+
+    .l2{top:385px; right:300px; width:260px; transform:rotate(7deg);}
+
+    .l3{top:560px; right:320px; width:240px; transform:rotate(-14deg);}
+
+    .l4{top:690px; right:430px; width:190px; transform:rotate(-36deg);}
+
+    .l5{top:210px; left:320px; width:250px; transform:rotate(-22deg);}
+
+    .l6{top:385px; left:300px; width:260px; transform:rotate(-7deg);}
+
+    .l7{top:560px; left:320px; width:240px; transform:rotate(14deg);}
+
+    .l8{top:690px; left:430px; width:190px; transform:rotate(36deg);}
+
+    @media(max-width:1100px){
+
+      .mindmap{
+
+        min-height:auto;
+
+        padding:20px;
+
+      }
+
+      .center,.node,.line{
+
+        position:static;
+
+        transform:none;
+
+        width:100%;
+
+      }
+
+      .center{
+
+        margin-bottom:18px;
+
+      }
+
+      .node{
+
+        margin-bottom:14px;
+
+      }
+
+      .line{
+
+        display:none;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="wrap">
+
+    <section class="hero">
+
+      <h1>مخطط استدامة المبادرة</h1>
+
+      <p>تصور بصري يوضح المرتكزات الرئيسة التي تحقق استدامة المبادرة واستمرار أثرها في المجتمع التعليمي</p>
+
+    </section>
+
+    <section class="mindmap">
+
+      <div class="center">استدامة المبادرة</div>
+
+      <div class="line l1"></div>
+
+      <div class="line l2"></div>
+
+      <div class="line l3"></div>
+
+      <div class="line l4"></div>
+
+      <div class="line l5"></div>
+
+      <div class="line l6"></div>
+
+      <div class="line l7"></div>
+
+      <div class="line l8"></div>
+
+      <div class="node n1">
+
+        <h3>مجتمعات التعلم المهنية</h3>
+
+        <p>استدامة التطوير من خلال تبادل الخبرات، التعلم التشاركي، وتحسين الممارسات بصورة مستمرة.</p>
+
+      </div>
+
+      <div class="node n2">
+
+        <h3>الشراكات المجتمعية</h3>
+
+        <p>تعزيز الدعم الخارجي وتوسيع الأثر عبر التعاون مع الجهات المجتمعية والتعليمية الداعمة.</p>
+
+      </div>
+
+      <div class="node n3">
+
+        <h3>بناء القدرات</h3>
+
+        <p>تأهيل الكوادر، نقل المعرفة، وتدريب بدائل تضمن استمرار العمل وعدم توقف المبادرة.</p>
+
+      </div>
+
+      <div class="node n4">
+
+        <h3>التوثيق ونقل الخبرة</h3>
+
+        <p>توثيق الإجراءات والأدلة والنماذج بما يسهم في حفظ المعرفة وتكرار التجربة بنجاح.</p>
+
+      </div>
+
+      <div class="node n5">
+
+        <h3>التحسين المستمر</h3>
+
+        <p>تطوير المبادرة دوريًا بناء على نتائج المتابعة والتقويم وقياس الأثر الفعلي.</p>
+
+      </div>
+
+      <div class="node n6">
+
+        <h3>المنصات الرقمية</h3>
+
+        <p>تفعيل أدوات رقمية مستدامة تدعم التشغيل والمتابعة والتقارير وإدارة المعرفة.</p>
+
+      </div>
+
+      <div class="node n7">
+
+        <h3>التكامل مع خطط المدرسة</h3>
+
+        <p>ربط المبادرة بالخطة التشغيلية والمدرسية بما يحولها إلى ممارسة مؤسسية ثابتة.</p>
+
+      </div>
+
+      <div class="node n8">
+
+        <h3>الدعم والموارد</h3>
+
+        <p>تنويع الموارد البشرية والتقنية والتنظيمية لضمان الاستمرارية والتوسع التدريجي.</p>
+
+      </div>
+
+    </section>
+
+  </div>
+
+</body>
+
+</html>
